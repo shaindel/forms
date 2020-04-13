@@ -31,7 +31,6 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'UA-122485098-8');
 </script>
-<script type="text/javascript" src="https://img04.en25.com/i/livevalidation_standalone.compressed.js"></script>
 </head>
 <body class="body-home">
   <div data-collapse="medium" data-animation="default" data-duration="400" data-w-id="1b2d8761-204f-1d5a-2a33-4aa001b5aa1c" class="container simple-navbar shadow grid-layout w-nav">
@@ -504,7 +503,205 @@ gtag('config', 'UA-122485098-8');
                   <input type="hidden" name="gclid" id="fe704" value="">
                 </div>
               </form>
+              <script type="text/javascript" src="https://img04.en25.com/i/livevalidation_standalone.compressed.js">
+              </script>
+              <script>
+                function handleFormSubmit(ele) {
+                  var submitButton = ele.querySelector('input[type=submit]');
+                  var spinner = document.createElement('span');
+                  spinner.setAttribute('class', 'loader');
+                  submitButton.setAttribute('disabled', true);
+                  submitButton.style.cursor = 'wait';
+                  submitButton.parentNode.appendChild(spinner);
+                  return true;
+                }
+                function resetSubmitButton(e){
+                  var submitButtons = e.target.form.getElementsByClassName('submit-button');
+                  for(var i=0;i<submitButtons.length;i++){
+                    submitButtons[i].disabled = false;
+                  }
+                }
+                function addChangeHandler(elements){
+                  for(var i=0; i<elements.length; i++){
+                    elements[i].addEventListener('change', resetSubmitButton);
+                  }
+                }
+                var form = document.getElementById('form89');
+                addChangeHandler(form.getElementsByTagName('input'));
+                addChangeHandler(form.getElementsByTagName('select'));
+                addChangeHandler(form.getElementsByTagName('textarea'));
+                var nodes = document.querySelectorAll('#form89 input[data-subscription]');
+                if (nodes) {
+                  for (var i = 0, len = nodes.length; i < len; i++) {
+                    var status = nodes[i].dataset ? nodes[i].dataset.subscription : nodes[i].getAttribute('data-subscription');
+                    if(status ==='true') {
+                      nodes[i].checked = true;
+                    }
+                  }
+                };
+                var nodes = document.querySelectorAll('#form89 select[data-value]');
+                if (nodes) {
+                  for (var i = 0; i < nodes.length; i++) {
+                    var node = nodes[i];
+                    var selectedValue = node.dataset ? node.dataset.value : node.getAttribute('data-value');
+                    if (selectedValue) {
+                      for (var j = 0; j < node.options.length; j++) {
+                        if(node.options[j].value === selectedValue) {
+                          node.options[j].selected = 'selected';
+                          break;
+                        }
+                      }
+                    }
+                  }
+                }
+                this.getParentElement = function(list) {
+                  return list[list.length-1].parentElement};
+                var dom0 = document.querySelector('#form89 #fe695');
+                var fe695 = new LiveValidation(dom0, {
+                  validMessage: "", onlyOnBlur: false, wait: 300}
+                                              );
+                fe695.add(Validate.Custom, {
+                  against: function(value) {
+                    return !value.match(/(telnet|ftp|https?):\/\/(?:[a-z0-9][a-z0-9-]{0,61}[a-z0-9]\.|[a-z0-9]\.)+[a-z]{2,63}/i);
+                  }
+                  , failureMessage: "No es válido el uso de URL en este campo "}
+                         );
+                fe695.add(Validate.Custom, {
+                  against: function(value) {
+                    return !value.match(/(<([^>]+)>)/ig);
+                  }
+                  , failureMessage: "No es válido el uso de HTML en este campo"}
+                         );
+                fe695.add(Validate.Length, {
+                  tooShortMessage:"Favor de ingresar un nombre de máximo 35 caracteres", tooLongMessage: "Favor de ingresar un nombre de máximo 35 caracteres",  minimum: 0, maximum: 35}
+                         );
+                fe695.add(Validate.Presence, {
+                  failureMessage:"Este campo es obligatorio"}
+                         );
+                var dom1 = document.querySelector('#form89 #fe696');
+                var fe696 = new LiveValidation(dom1, {
+                  validMessage: "", onlyOnBlur: false, wait: 300}
+                                              );
+                fe696.add(Validate.Custom, {
+                  against: function(value) {
+                    return !value.match(/(telnet|ftp|https?):\/\/(?:[a-z0-9][a-z0-9-]{0,61}[a-z0-9]\.|[a-z0-9]\.)+[a-z]{2,63}/i);
+                  }
+                  , failureMessage: "No es válido el uso de URL en este campo "}
+                         );
+                fe696.add(Validate.Custom, {
+                  against: function(value) {
+                    return !value.match(/(<([^>]+)>)/ig);
+                  }
+                  , failureMessage: "No es válido el uso de HTML en este campo"}
+                         );
+                fe696.add(Validate.Length, {
+                  tooShortMessage:"Favor de ingresar un apellido de máximo 35 caracteres", tooLongMessage: "Favor de ingresar un apellido de máximo 35 caracteres",  minimum: 0, maximum: 35}
+                         );
+                fe696.add(Validate.Presence, {
+                  failureMessage:"Este campo es obligatorio"}
+                         );
+                var dom2 = document.querySelector('#form89 #fe706');
+                var fe706 = new LiveValidation(dom2, {
+                  validMessage: "", onlyOnBlur: false, wait: 300}
+                                              );
+                fe706.add(Validate.Custom, {
+                  against: function(value) {
+                    return !value.match(/(telnet|ftp|https?):\/\/(?:[a-z0-9][a-z0-9-]{0,61}[a-z0-9]\.|[a-z0-9]\.)+[a-z]{2,63}/i);
+                  }
+                  , failureMessage: "No es válido el uso de URL en este campo "}
+                         );
+                fe706.add(Validate.Custom, {
+                  against: function(value) {
+                    return !value.match(/(<([^>]+)>)/ig);
+                  }
+                  , failureMessage: "No es válido el uso de HTML en este campo"}
+                         );
+                fe706.add(Validate.Length, {
+                  tooShortMessage:"Favor de ingresar un apellido de máximo 35 caracteres", tooLongMessage: "Favor de ingresar un apellido de máximo 35 caracteres",  minimum: 1, maximum: 35}
+                         );
+                fe706.add(Validate.Presence, {
+                  failureMessage:"Este campo es obligatorio"}
+                         );
+                var dom3 = document.querySelector('#form89 #fe697');
+                var fe697 = new LiveValidation(dom3, {
+                  validMessage: "", onlyOnBlur: false, wait: 300}
+                                              );
+                fe697.add(Validate.Presence, {
+                  failureMessage:"Este campo es obligatorio"}
+                         );
+                fe697.add(Validate.Format, {
+                  pattern: /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i, failureMessage: "Favor de ingresar un correo electrónico válido"}
+                         );
+                var dom4 = document.querySelector('#form89 #fe707');
+                var fe707 = new LiveValidation(dom4, {
+                  validMessage: "", onlyOnBlur: false, wait: 300}
+                                              );
+                fe707.add(Validate.Custom, {
+                  against: function(value) {
+                    return !value.match(/(telnet|ftp|https?):\/\/(?:[a-z0-9][a-z0-9-]{0,61}[a-z0-9]\.|[a-z0-9]\.)+[a-z]{2,63}/i);
+                  }
+                  , failureMessage: "Value must not contain any URL's"}
+                         );
+                fe707.add(Validate.Custom, {
+                  against: function(value) {
+                    return !value.match(/(<([^>]+)>)/ig);
+                  }
+                  , failureMessage: "Value must not contain any HTML"}
+                         );
+                fe707.add(Validate.Length, {
+                  tooShortMessage:"Favor de ingresar un teléfono de 10 caracteres", tooLongMessage: "Favor de ingresar un teléfono de 10 caracteres",  minimum: 10, maximum: 10}
+                         );
+                fe707.add(Validate.Presence, {
+                  failureMessage:"Este campo es obligatorio"}
+                         );
+              </script>
+              <!--Pick up the UTM parameter values and populate the hidden fields on the form before submit -->
+              <script type="text/javascript"> 
+              var defaultHiddenFieldNameValue = "NoData";
+              function getQueryStringParamValue(strQStrParam) {
+              var strURL = document.location.href;
+              var strQStrParamValue = "";
+                        if (strURL.indexOf('?') != -1)
+                        {
+                                    strQStrParamValue = strURL.substr(strURL.indexOf('?') + 1);
+                                    if (strQStrParamValue.indexOf(strQStrParam) != -1)
+                                    {
+                                                strQStrParamValue = strQStrParamValue.substr(strQStrParamValue.indexOf(strQStrParam));
+                                                strQStrParamValue = strQStrParamValue.substr(strQStrParamValue.indexOf('=') + 1);
+                                                if (strQStrParamValue.indexOf('&') != -1)
+                                                strQStrParamValue = strQStrParamValue.substr(0, strQStrParamValue.indexOf('&'));
+                                                return strQStrParamValue;
 
+                                    }else{
+                                                strQStrParamValue = defaultHiddenFieldNameValue;
+                                                return strQStrParamValue;
+                                    }
+                        }else{
+                                    strQStrParamValue = defaultHiddenFieldNameValue;
+                                    return strQStrParamValue;
+                        }
+              }
+                 
+              var form = "V01-GIM-SitioGeneral-SWFCI";   //Nombre de los formularios
+
+              function setCampaign(){
+                var elqForm = document.forms[form];
+                
+                
+              elqForm.elements['utm_source'].value = getQueryStringParamValue('utm_source');
+              elqForm.elements['utm_medium'].value = getQueryStringParamValue('utm_medium');
+              elqForm.elements['utm_campaign'].value = getQueryStringParamValue('utm_campaign');
+              elqForm.elements['utm_content'].value = getQueryStringParamValue('utm_content');
+              elqForm.elements['utm_term'].value = getQueryStringParamValue('utm_term');
+              elqForm.elements['gclid'].value = getQueryStringParamValue('gclid');
+
+
+                  }
+
+              window.onload = setCampaign;
+
+              </script> 
+              <!--End UTM Script-->
 
           </div>
         </div>
@@ -524,7 +721,8 @@ gtag('config', 'UA-122485098-8');
         <div class="col col-l-4 col-m-12 col-xs-12 order-second no-margin no-padding">
           <div class="div-block-newsletter privee">
             <div class="embed-news-letter w-embed w-iframe">
-              <!-- <iframe src="newsletter.html" width="100%" height="100%" style="border:none"></iframe> -->
+
+            <div class="title">SUSCRÍBETE AL NEWSLETTER</div>        
             <form method="post" name="UntitledForm-1582305590598" action="https://s898351069.t.eloqua.com/e/f2" onsubmit="return handleFormSubmit(this)" id="form77" class="elq-form">
               <input value="UntitledForm-1582305590598" type="hidden" name="elqFormName">
               <input value="898351069" type="hidden" name="elqSiteId">
@@ -623,255 +821,115 @@ gtag('config', 'UA-122485098-8');
                 <input type="hidden" name="utm_content" id="fe569" value="">
                 <input type="hidden" name="gclid" id="fe570" value="">
               </div>
-            </form>                
-              </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div><a event_label="whatsapp" event_category="botones" event_action="clic" href="https://api.whatsapp.com/send?phone=5215544559426&amp;amp;text=&quot;hola&quot;" target="_blank" class="whatsapp-button w-inline-block"><img src="images/icon_whatsapp_contact.svg" width="250" alt="" class="icon-whatsapp-msg"></a>
-  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js?site=5e8e006994a6346c489c65d5" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="js/beta-gimlivingspaces.js" type="text/javascript"></script>
-  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
-<!--validación de formularios-->
-  <script>
-    function handleFormSubmit(ele) {
-      var submitButton = ele.querySelector('input[type=submit]');
-      var spinner = document.createElement('span');
-      spinner.setAttribute('class', 'loader');
-      submitButton.setAttribute('disabled', true);
-      submitButton.style.cursor = 'wait';
-      submitButton.parentNode.appendChild(spinner);
-      return true;
-    }
-    function resetSubmitButton(e){
-      var submitButtons = e.target.form.getElementsByClassName('submit-button');
-      for(var i=0;i<submitButtons.length;i++){
-        submitButtons[i].disabled = false;
-      }
-    }
-    function addChangeHandler(elements){
-      for(var i=0; i<elements.length; i++){
-        elements[i].addEventListener('change', resetSubmitButton);
-      }
-    }
-
-
-    var form = document.getElementById('form89');
-    var forma = document.getElementById('form77');
-    addChangeHandler(form.getElementsByTagName('input'));
-    addChangeHandler(form.getElementsByTagName('select'));
-    addChangeHandler(form.getElementsByTagName('textarea'));
-    addChangeHandler(forma.getElementsByTagName('input'));
-    addChangeHandler(forma.getElementsByTagName('select'));
-    addChangeHandler(forma.getElementsByTagName('textarea'));                
-    var nodes = document.querySelectorAll('#form89 input[data-subscription]');
-    var nodesa = document.querySelectorAll('#form77 input[data-subscription]');
-    if (nodes) {
-      for (var i = 0, len = nodes.length; i < len; i++) {
-        var status = nodes[i].dataset ? nodes[i].dataset.subscription : nodes[i].getAttribute('data-subscription');
-        if(status ==='true') {
-          nodes[i].checked = true;
-        }
-      }
-    };
-    if (nodesa) {
-      for (var i = 0, len = nodesa.length; i < len; i++) {
-        var status = nodesa[i].dataset ? nodesa[i].dataset.subscription : nodesa[i].getAttribute('data-subscription');
-        if(status ==='true') {
-          nodesa[i].checked = true;
-        }
-      }
-    };                
-    var nodes = document.querySelectorAll('#form89 select[data-value]');
-    var nodesa = document.querySelectorAll('#form77 select[data-value]');
-    if (nodes) {
-      for (var i = 0; i < nodes.length; i++) {
-        var node = nodes[i];
-        var selectedValue = node.dataset ? node.dataset.value : node.getAttribute('data-value');
-        if (selectedValue) {
-          for (var j = 0; j < node.options.length; j++) {
-            if(node.options[j].value === selectedValue) {
-              node.options[j].selected = 'selected';
-              break;
-            }
-          }
-        }
-      }
-    }
-    if (nodesa) {
-      for (var i = 0; i < nodesa.length; i++) {
-        var nodea = nodesa[i];
-        var selectedValue = nodea.dataset ? nodea.dataset.value : nodea.getAttribute('data-value');
-        if (selectedValue) {
-          for (var j = 0; j < nodea.options.length; j++) {
-            if(nodea.options[j].value === selectedValue) {
-              nodea.options[j].selected = 'selected';
-              break;
-            }
-          }
-        }
-      }
-    }                
-    this.getParentElement = function(list) {
-      return list[list.length-1].parentElement};
-    var dom0 = document.querySelector('#form89 #fe695');
-    var dom0a = document.querySelector('#form77 #fe561');
-    
-    var fe695 = new LiveValidation(dom0, {
-      validMessage: "", onlyOnBlur: false, wait: 300}
-                                  );
-    fe695.add(Validate.Custom, {
-      against: function(value) {
-        return !value.match(/(telnet|ftp|https?):\/\/(?:[a-z0-9][a-z0-9-]{0,61}[a-z0-9]\.|[a-z0-9]\.)+[a-z]{2,63}/i);
-      }
-      , failureMessage: "No es válido el uso de URL en este campo "}
-             );
-    fe695.add(Validate.Custom, {
-      against: function(value) {
-        return !value.match(/(<([^>]+)>)/ig);
-      }
-      , failureMessage: "No es válido el uso de HTML en este campo"}
-             );
-    fe695.add(Validate.Length, {
-      tooShortMessage:"Favor de ingresar un nombre de máximo 35 caracteres", tooLongMessage: "Favor de ingresar un nombre de máximo 35 caracteres",  minimum: 0, maximum: 35}
-             );
-    fe695.add(Validate.Presence, {
-      failureMessage:"Este campo es obligatorio"}
-             );
-    var dom1 = document.querySelector('#form89 #fe696');
-    var fe696 = new LiveValidation(dom1, {
-      validMessage: "", onlyOnBlur: false, wait: 300}
-                                  );
-    fe696.add(Validate.Custom, {
-      against: function(value) {
-        return !value.match(/(telnet|ftp|https?):\/\/(?:[a-z0-9][a-z0-9-]{0,61}[a-z0-9]\.|[a-z0-9]\.)+[a-z]{2,63}/i);
-      }
-      , failureMessage: "No es válido el uso de URL en este campo "}
-             );
-    fe696.add(Validate.Custom, {
-      against: function(value) {
-        return !value.match(/(<([^>]+)>)/ig);
-      }
-      , failureMessage: "No es válido el uso de HTML en este campo"}
-             );
-    fe696.add(Validate.Length, {
-      tooShortMessage:"Favor de ingresar un apellido de máximo 35 caracteres", tooLongMessage: "Favor de ingresar un apellido de máximo 35 caracteres",  minimum: 0, maximum: 35}
-             );
-    fe696.add(Validate.Presence, {
-      failureMessage:"Este campo es obligatorio"}
-             );
-    var dom2 = document.querySelector('#form89 #fe706');
-    var fe706 = new LiveValidation(dom2, {
-      validMessage: "", onlyOnBlur: false, wait: 300}
-                                  );
-    fe706.add(Validate.Custom, {
-      against: function(value) {
-        return !value.match(/(telnet|ftp|https?):\/\/(?:[a-z0-9][a-z0-9-]{0,61}[a-z0-9]\.|[a-z0-9]\.)+[a-z]{2,63}/i);
-      }
-      , failureMessage: "No es válido el uso de URL en este campo "}
-             );
-    fe706.add(Validate.Custom, {
-      against: function(value) {
-        return !value.match(/(<([^>]+)>)/ig);
-      }
-      , failureMessage: "No es válido el uso de HTML en este campo"}
-             );
-    fe706.add(Validate.Length, {
-      tooShortMessage:"Favor de ingresar un apellido de máximo 35 caracteres", tooLongMessage: "Favor de ingresar un apellido de máximo 35 caracteres",  minimum: 1, maximum: 35}
-             );
-    fe706.add(Validate.Presence, {
-      failureMessage:"Este campo es obligatorio"}
-             );
-    var dom3 = document.querySelector('#form89 #fe697');
-    var fe697 = new LiveValidation(dom3, {
-      validMessage: "", onlyOnBlur: false, wait: 300}
-                                  );
-    fe697.add(Validate.Presence, {
-      failureMessage:"Este campo es obligatorio"}
-             );
-    fe697.add(Validate.Format, {
-      pattern: /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i, failureMessage: "Favor de ingresar un correo electrónico válido"}
-             );
-    var dom4 = document.querySelector('#form89 #fe707');
-    var fe707 = new LiveValidation(dom4, {
-      validMessage: "", onlyOnBlur: false, wait: 300}
-                                  );
-    fe707.add(Validate.Custom, {
-      against: function(value) {
-        return !value.match(/(telnet|ftp|https?):\/\/(?:[a-z0-9][a-z0-9-]{0,61}[a-z0-9]\.|[a-z0-9]\.)+[a-z]{2,63}/i);
-      }
-      , failureMessage: "Value must not contain any URL's"}
-             );
-    fe707.add(Validate.Custom, {
-      against: function(value) {
-        return !value.match(/(<([^>]+)>)/ig);
-      }
-      , failureMessage: "Value must not contain any HTML"}
-             );
-    fe707.add(Validate.Length, {
-      tooShortMessage:"Favor de ingresar un teléfono de 10 caracteres", tooLongMessage: "Favor de ingresar un teléfono de 10 caracteres",  minimum: 10, maximum: 10}
-             );
-    fe707.add(Validate.Presence, {
-      failureMessage:"Este campo es obligatorio"}
-             );
-
-    var fe561 = new LiveValidation(dom0a, {
-      validMessage: "", onlyOnBlur: false, wait: 300}
-                                  );
-    fe561.add(Validate.Custom, {
-      against: function(value) {
-        return !value.match(/(telnet|ftp|https?):\/\/(?:[a-z0-9][a-z0-9-]{0,61}[a-z0-9]\.|[a-z0-9]\.)+[a-z]{2,63}/i);
-      }
-      , failureMessage: "Value must not contain any URL's"}
-             );
-    fe561.add(Validate.Custom, {
-      against: function(value) {
-        return !value.match(/(<([^>]+)>)/ig);
-      }
-      , failureMessage: "Value must not contain any HTML"}
-             );
-    fe561.add(Validate.Length, {
-      tooShortMessage:"Invalid length for field value", tooLongMessage: "Invalid length for field value",  minimum: 0, maximum: 35}
-             );
-    fe561.add(Validate.Presence, {
-      failureMessage:"Este campo es requerido"}
-             );
-    var dom1 = document.querySelector('#form77 #fe562');
-    var fe562 = new LiveValidation(dom1, {
-      validMessage: "", onlyOnBlur: false, wait: 300}
-                                  );
-    fe562.add(Validate.Custom, {
-      against: function(value) {
-        return !value.match(/(telnet|ftp|https?):\/\/(?:[a-z0-9][a-z0-9-]{0,61}[a-z0-9]\.|[a-z0-9]\.)+[a-z]{2,63}/i);
-      }
-      , failureMessage: "Value must not contain any URL's"}
-             );
-    fe562.add(Validate.Custom, {
-      against: function(value) {
-        return !value.match(/(<([^>]+)>)/ig);
-      }
-      , failureMessage: "Value must not contain any HTML"}
-             );
-    fe562.add(Validate.Length, {
-      tooShortMessage:"Invalid length for field value", tooLongMessage: "Invalid length for field value",  minimum: 0, maximum: 35}
-             );
-    fe562.add(Validate.Presence, {
-      failureMessage:"Este campo es requerido"}
-             );
-    var dom2 = document.querySelector('#form77 #fe563');
-    var fe563 = new LiveValidation(dom2, {
-      validMessage: "", onlyOnBlur: false, wait: 300}
-                                  );
-    fe563.add(Validate.Presence, {
-      failureMessage:"Este campo es requerido"}
-             );
-    fe563.add(Validate.Format, {
-      pattern: /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i, failureMessage: "A valid email address is required"}
-             );                
-  </script>  
-<!--//-->
-
+            </form>
+            <script type="text/javascript" src="https://img04.en25.com/i/livevalidation_standalone.compressed.js">
+            </script>
+            <script>
+              function handleFormSubmit(ele) {
+                var submitButton = ele.querySelector('input[type=submit]');
+                var spinner = document.createElement('span');
+                spinner.setAttribute('class', 'loader');
+                submitButton.setAttribute('disabled', true);
+                submitButton.style.cursor = 'wait';
+                submitButton.parentNode.appendChild(spinner);
+                return true;
+              }
+              function resetSubmitButton(e){
+                var submitButtons = e.target.form.getElementsByClassName('submit-button');
+                for(var i=0;i<submitButtons.length;i++){
+                  submitButtons[i].disabled = false;
+                }
+              }
+              function addChangeHandler(elements){
+                for(var i=0; i<elements.length; i++){
+                  elements[i].addEventListener('change', resetSubmitButton);
+                }
+              }
+              var form = document.getElementById('form77');
+              addChangeHandler(form.getElementsByTagName('input'));
+              addChangeHandler(form.getElementsByTagName('select'));
+              addChangeHandler(form.getElementsByTagName('textarea'));
+              var nodes = document.querySelectorAll('#form77 input[data-subscription]');
+              if (nodes) {
+                for (var i = 0, len = nodes.length; i < len; i++) {
+                  var status = nodes[i].dataset ? nodes[i].dataset.subscription : nodes[i].getAttribute('data-subscription');
+                  if(status ==='true') {
+                    nodes[i].checked = true;
+                  }
+                }
+              };
+              var nodes = document.querySelectorAll('#form77 select[data-value]');
+              if (nodes) {
+                for (var i = 0; i < nodes.length; i++) {
+                  var node = nodes[i];
+                  var selectedValue = node.dataset ? node.dataset.value : node.getAttribute('data-value');
+                  if (selectedValue) {
+                    for (var j = 0; j < node.options.length; j++) {
+                      if(node.options[j].value === selectedValue) {
+                        node.options[j].selected = 'selected';
+                        break;
+                      }
+                    }
+                  }
+                }
+              }
+              this.getParentElement = function(list) {
+                return list[list.length-1].parentElement};
+              var dom0 = document.querySelector('#form77 #fe561');
+              var fe561 = new LiveValidation(dom0, {
+                validMessage: "", onlyOnBlur: false, wait: 300}
+                                            );
+              fe561.add(Validate.Custom, {
+                against: function(value) {
+                  return !value.match(/(telnet|ftp|https?):\/\/(?:[a-z0-9][a-z0-9-]{0,61}[a-z0-9]\.|[a-z0-9]\.)+[a-z]{2,63}/i);
+                }
+                , failureMessage: "Value must not contain any URL's"}
+                       );
+              fe561.add(Validate.Custom, {
+                against: function(value) {
+                  return !value.match(/(<([^>]+)>)/ig);
+                }
+                , failureMessage: "Value must not contain any HTML"}
+                       );
+              fe561.add(Validate.Length, {
+                tooShortMessage:"Invalid length for field value", tooLongMessage: "Invalid length for field value",  minimum: 0, maximum: 35}
+                       );
+              fe561.add(Validate.Presence, {
+                failureMessage:"Este campo es requerido"}
+                       );
+              var dom1 = document.querySelector('#form77 #fe562');
+              var fe562 = new LiveValidation(dom1, {
+                validMessage: "", onlyOnBlur: false, wait: 300}
+                                            );
+              fe562.add(Validate.Custom, {
+                against: function(value) {
+                  return !value.match(/(telnet|ftp|https?):\/\/(?:[a-z0-9][a-z0-9-]{0,61}[a-z0-9]\.|[a-z0-9]\.)+[a-z]{2,63}/i);
+                }
+                , failureMessage: "Value must not contain any URL's"}
+                       );
+              fe562.add(Validate.Custom, {
+                against: function(value) {
+                  return !value.match(/(<([^>]+)>)/ig);
+                }
+                , failureMessage: "Value must not contain any HTML"}
+                       );
+              fe562.add(Validate.Length, {
+                tooShortMessage:"Invalid length for field value", tooLongMessage: "Invalid length for field value",  minimum: 0, maximum: 35}
+                       );
+              fe562.add(Validate.Presence, {
+                failureMessage:"Este campo es requerido"}
+                       );
+              var dom2 = document.querySelector('#form77 #fe563');
+              var fe563 = new LiveValidation(dom2, {
+                validMessage: "", onlyOnBlur: false, wait: 300}
+                                            );
+              fe563.add(Validate.Presence, {
+                failureMessage:"Este campo es requerido"}
+                       );
+              fe563.add(Validate.Format, {
+                pattern: /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i, failureMessage: "A valid email address is required"}
+                       );
+            </script>
             <!--Pick up the UTM parameter values and populate the hidden fields on the form before submit -->
             <script type="text/javascript"> 
               var defaultHiddenFieldNameValue = "NoData";
@@ -900,13 +958,9 @@ gtag('config', 'UA-122485098-8');
               }
                  
               var form = "UntitledForm-1582305590598";   //NEWSLETTER
-              var forma = "V01-GIM-SitioGeneral-SWFCI";   //CONTACTO
-
-              
 
               function setCampaign(){
                 var elqForm = document.forms[form];
-                var elqForma = document.forms[forma];
                 
                 
               elqForm.elements['utm_source'].value = getQueryStringParamValue('utm_source');
@@ -916,73 +970,75 @@ gtag('config', 'UA-122485098-8');
               elqForm.elements['utm_term'].value = getQueryStringParamValue('utm_term');
               elqForm.elements['gclid'].value = getQueryStringParamValue('gclid');
 
-              elqForma.elements['utm_source'].value = getQueryStringParamValue('utm_source');
-              elqForma.elements['utm_medium'].value = getQueryStringParamValue('utm_medium');
-              elqForma.elements['utm_campaign'].value = getQueryStringParamValue('utm_campaign');
-              elqForma.elements['utm_content'].value = getQueryStringParamValue('utm_content');
-              elqForma.elements['utm_term'].value = getQueryStringParamValue('utm_term');
-              elqForma.elements['gclid'].value = getQueryStringParamValue('gclid');              
-
 
                   }
 
               window.onload = setCampaign;
 
             </script> 
-            <!--End UTM Script-->              
+            <!--End UTM Script-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><a event_label="whatsapp" event_category="botones" event_action="clic" href="https://api.whatsapp.com/send?phone=5215544559426&amp;amp;text=&quot;hola&quot;" target="_blank" class="whatsapp-button w-inline-block"><img src="images/icon_whatsapp_contact.svg" width="250" alt="" class="icon-whatsapp-msg"></a>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js?site=5e8e006994a6346c489c65d5" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="js/beta-gimlivingspaces.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
   <script>
-      console.clear();
-    /* globals
-      $
-    */
-    const data = {
-        months: {
-            en: [
-                'January', 'February', 'March', 'April', 'May', 'June',
-                'July', 'August', 'September', 'October', 'November', 'December',
-            ],
-            local: [],
-        },
-        days: {
-            en: [
-                'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday',
-            ],
-            local: [],
-        }
-    };
-    data.months.local = [
-        'Enero -', 'Febrero -', 'Marzo -', 'Abril -', 'Mayo -', 'Junio -',
-        'Julio -', 'Agosto -', 'Septiembre -', 'Octubre -', 'Noviembre -', 'Diciembre -',
-    ];
-    data.days.local = [
-        'Lunes, ', 'Martes, ', 'Miércoles, ', 'Jueves, ', 'Viernes, ', 'Sábado, ', 'Domingo, ',
-    ];
-    if (data.months.local.length !== 12) {
-        console.error('Months are incorrect! Check your script.')
+  console.clear();
+/* globals
+  $
+*/
+const data = {
+    months: {
+        en: [
+            'January', 'February', 'March', 'April', 'May', 'June',
+            'July', 'August', 'September', 'October', 'November', 'December',
+        ],
+        local: [],
+    },
+    days: {
+        en: [
+            'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday',
+        ],
+        local: [],
     }
-    if (data.days.local.length !== 7) {
-        console.error('Days are incorrect! Check your script.')
-    }
-    const shortenDaysMonths = daymonth => daymonth.substring(0, 3);
-    const convertToLocal = (daydate, whatToConvert) => {
-        whatToConvert.each(function() {
-            const theObject = $(this);
-            let text = theObject.text();
-            if (daydate === 'm' || daydate === 'month' || daydate === 'months') {
-                for (let i = 0; i < data.months.en.length; i++) {
-                    text = text.replace(data.months.en[i], data.months.local[i])
-                    text = text.replace(shortenDaysMonths(data.months.en[i]), shortenDaysMonths(data.months.local[i]))
-                    theObject.text(text)
-                }
-            } else if (daydate === 'd' || daydate === 'day' || daydate === 'days') {
-                for (let i = 0; i < data.days.en.length; i++) {
-                    text = text.replace(data.days.en[i], data.days.local[i])
-                    text = text.replace(shortenDaysMonths(data.days.en[i]), shortenDaysMonths(data.days.local[i]))
-                    theObject.text(text)
-                }
+};
+data.months.local = [
+    'Enero -', 'Febrero -', 'Marzo -', 'Abril -', 'Mayo -', 'Junio -',
+    'Julio -', 'Agosto -', 'Septiembre -', 'Octubre -', 'Noviembre -', 'Diciembre -',
+];
+data.days.local = [
+    'Lunes, ', 'Martes, ', 'Miércoles, ', 'Jueves, ', 'Viernes, ', 'Sábado, ', 'Domingo, ',
+];
+if (data.months.local.length !== 12) {
+    console.error('Months are incorrect! Check your script.')
+}
+if (data.days.local.length !== 7) {
+    console.error('Days are incorrect! Check your script.')
+}
+const shortenDaysMonths = daymonth => daymonth.substring(0, 3);
+const convertToLocal = (daydate, whatToConvert) => {
+    whatToConvert.each(function() {
+        const theObject = $(this);
+        let text = theObject.text();
+        if (daydate === 'm' || daydate === 'month' || daydate === 'months') {
+            for (let i = 0; i < data.months.en.length; i++) {
+                text = text.replace(data.months.en[i], data.months.local[i])
+                text = text.replace(shortenDaysMonths(data.months.en[i]), shortenDaysMonths(data.months.local[i]))
+                theObject.text(text)
             }
-        });
-    }; 
+        } else if (daydate === 'd' || daydate === 'day' || daydate === 'days') {
+            for (let i = 0; i < data.days.en.length; i++) {
+                text = text.replace(data.days.en[i], data.days.local[i])
+                text = text.replace(shortenDaysMonths(data.days.en[i]), shortenDaysMonths(data.days.local[i]))
+                theObject.text(text)
+            }
+        }
+    });
+}; 
 </script>     
 
 <!--Eloqua Asynchronous Visitor Tracking Script-->
